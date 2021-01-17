@@ -7,7 +7,6 @@ import {
   Card,
   Button,
   Form,
-  ListGroupItem,
 } from "react-bootstrap";
 import {Link } from "react-router-dom";
 import Rating from "../components/Rating";
