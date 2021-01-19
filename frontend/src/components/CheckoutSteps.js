@@ -3,13 +3,11 @@ import { LinkContainer } from "react-router-bootstrap";
 
 const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
   return (
-    <Nav className="justify-content-center mb-4">
+    <Nav className="justify-content-center mb-4 nav-pills">
       <Nav.Item>
         {step1 ? (
           <LinkContainer to="/login">
-            <Button variant="secondary" size="sm active">
-              Sign In
-            </Button>
+            <Nav.Link className='active'>Sign In</Nav.Link>
           </LinkContainer>
         ) : (
           <Nav.Link disabled>Sign In</Nav.Link>
@@ -18,9 +16,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
       <Nav.Item>
         {step2 ? (
           <LinkContainer to="/shipping">
-            <Button variant="secondary" size="sm active">
-              Shipping
-            </Button>
+            <Nav.Link className='active'>Shipping</Nav.Link>
           </LinkContainer>
         ) : (
           <Nav.Link disabled>Shipping</Nav.Link>
@@ -29,9 +25,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
       <Nav.Item>
         {step3 ? (
           <LinkContainer to="/payment">
-            <Button variant="secondary" size="sm active">
-              Payment
-            </Button>
+            <Nav.Link className='active'>Payment</Nav.Link>
           </LinkContainer>
         ) : (
           <Nav.Link disabled>Payment</Nav.Link>
@@ -40,9 +34,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
       <Nav.Item>
         {step4 ? (
           <LinkContainer to="/placeOrder">
-            <Button variant="secondary" size="sm active">
-              Sign In
-            </Button>
+            <Nav.Link className='active'>Place Order</Nav.Link>
           </LinkContainer>
         ) : (
           <Nav.Link disabled>Place Order</Nav.Link>
@@ -53,3 +45,4 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
 };
 
 export default CheckoutSteps;
+//#F9AA33
