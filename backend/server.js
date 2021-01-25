@@ -1,5 +1,6 @@
 import path from 'path'
 import express from "express";
+import morgan from 'morgan';
 import connectDB from "./config/db.js";
 import products from "./data/products.js";
 import dotenv from "dotenv";
@@ -14,6 +15,10 @@ dotenv.config();
 connectDB();
 
 const app = express();
+
+if(process.env.NODE_ENV === 'development'){
+  app.use(morgan('dev'))
+}
 
 app.use(express.json());
 
